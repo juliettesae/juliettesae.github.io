@@ -92,6 +92,13 @@ atom_feed:
   path                   : # blank (default) uses feed.xml
 
 
+# Navigation Settings
+nav:
+  - text: "CV"
+    url: "/cv/"
+  - text: "Publications"
+    url: "/publications/"
+
 # SEO Related
 google_site_verification :
 bing_site_verification   :
