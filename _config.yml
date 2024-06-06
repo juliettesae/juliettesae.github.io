@@ -20,15 +20,15 @@ repository               : "academicpages/academicpages.github.io"
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
-  # Biographic information
-  avatar           : "jujuhydra copie.jpg"
-  name             : "Juliette Saetre"
-  pronouns         : "she/her"  
-  bio              : "PhD researcher in Sociology - European University Institute"
-  location         : "Florence, Italy"
-  employer         : "European University Institute"
-  uri              : # URL
-  email            : "juliette.saetre@eui.eu" 
+# Biographic information
+avatar           : "/images/jujuhydra copie.jpg" # Ensure the path is correct
+name             : "Juliette Saetre"
+pronouns         : "she/her"  
+bio              : "PhD researcher in Sociology - European University Institute"
+location         : "Florence, Italy"
+employer         : "European University Institute"
+uri              : # URL
+email            : "juliette.saetre@eui.eu"
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile
