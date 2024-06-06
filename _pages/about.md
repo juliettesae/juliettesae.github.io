@@ -7,9 +7,18 @@ redirect_from:
   - /about.html
 ---
 
-I am a [PhD researcher] ([https://github.com/academicpages/academicpages.github.io](https://www.eui.eu/people?id=juliette-saetre)  at the European University Institute [European University Institute](https://www.eui.eu/en/home) in Florence.
+My name is Juliette Saetre, I am [PhD researcher] ([https://github.com/academicpages/academicpages.github.io](https://www.eui.eu/people?id=juliette-saetre)  at the European University Institute [European University Institute](https://www.eui.eu/en/home) in Florence.
 
-My research focuses on how the movement of people-and particularily forced displacement-fosters the 
+My research explores the impacts of human mobility on the formation and spread of transnational social movements. My PhD work delves into the mass forced displacement that followed the 1970s dictatorships in Latin America, analyzing its enduring influence on mobilization within diaspora communities and host societies alike. Beyond this, I investigate the broader diffusion of ideas catalyzed by mobility, including the effect of returning soldiers on public opinion towards conflicts in their home countries.
+
+I utilize a dynamic mix of quantitative and qualitative methodologies, employing a wide range of data collection techniques such as data mining, archival research, and interviews.
+
+
+
+
+
+
+
 
 
 
