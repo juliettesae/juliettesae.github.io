@@ -1,0 +1,9 @@
+/* Add padding to the top of the page content to make it start lower */
+.page-content {
+  padding-top: 100px; /* Adjust this value to move the text lower */
+}
+
+/* Make the text smaller */
+.page-content p {
+  font-size: 14px; /* Adjust this value to change the text size */
+}
