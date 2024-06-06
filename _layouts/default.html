@@ -1,18 +1,12 @@
----
-layout: compress
----
-
-{% include base_path %}
-
 <!doctype html>
 <html lang="{{ site.locale | slice: 0,2 }}" class="no-js">
   <head>
     {% include head.html %}
+    <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
     {% include head/custom.html %}
   </head>
 
   <body>
-
     {% include browser-upgrade.html %}
     {% include masthead.html %}
 
@@ -26,6 +20,5 @@ layout: compress
     </div>
 
     {% include scripts.html %}
-
   </body>
 </html>
