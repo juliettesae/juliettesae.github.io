@@ -21,7 +21,7 @@ repository               : "academicpages/academicpages.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
 # Biographic information
-avatar           : "/images/jujuhydra.jpg" # Ensure the path is correct
+avatar           : "/images/websiteju.png" # Ensure the path is correct
 name             : "Juliette Saetre"
 pronouns         : "she/her"  
 bio              : "PhD researcher in Sociology"
