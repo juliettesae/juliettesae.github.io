@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-IT"
-title                    : "Juliette Saeter"
+title                    : "Juliette Saetre"
 title_separator          : "-"
 name                     : &name "Juliette Saetre"
 description              : &description "PhD researcher at the European University Institute"
@@ -24,7 +24,7 @@ author:
   avatar           : "profile.png"
   name             : "Juliette Saetre"
   pronouns         : "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
+  bio              : "PhD researcher in Sociology - European University Institute"
   location         : "Florence, Italy"
   employer         : "European University Institute"
   uri              : # URL
