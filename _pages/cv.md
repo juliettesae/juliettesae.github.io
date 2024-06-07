@@ -9,6 +9,8 @@ redirect_from:
 
 {% include base_path %}
 
+You can view and download my CV [here](assets/files/Juliette_Saetre_CV.pdf).
+
 Education
 ======
 * Ph.D in Version Control Theory, GitHub University, 2018 (expected)
