@@ -1,12 +1,11 @@
 ---
 layout: default
-title: "Juliette Saetre"
+title: "Your Title"
 author_profile: true
 sidebar:
   - image: jujuhydra.jpg
     image_alt: "Juliette's research image"
 ---
-
 
 My name is Juliette Saetre, I am [PhD researcher](https://www.eui.eu/people?id=juliette-saetre) at the [European University Institute](https://www.eui.eu/en/home) in Florence.
 
