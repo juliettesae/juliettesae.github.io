@@ -79,12 +79,13 @@ footer div { max-width: 72rem; margin: 0 auto; padding: 1.5rem; font-size: 0.85r
 main p, details p { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
 main .pub-title, main .pub-meta, main .course { text-align: left; hyphens: manual; }
 
-/* Home page: wider sidebar, narrower text, airier paragraphs */
+/* Home page: text column wide enough for the first sentence to fit on one line */
 @media (min-width: 50.01rem) {
-  .page-index .layout { grid-template-columns: 23rem minmax(0, 1fr); gap: 4.5rem; }
-  .page-index .avatar { width: 20rem; }
-  .page-index .avatar-fallback { width: 20rem; height: 24rem; }
-  .page-index main { max-width: 38rem; }
+  .page-index .layout { grid-template-columns: 18rem minmax(0, 1fr); gap: 3.5rem; max-width: 76rem; }
+  .page-index .masthead-inner, .page-index footer div { max-width: 76rem; }
+  .page-index .avatar { width: 17rem; }
+  .page-index .avatar-fallback { width: 17rem; height: 21rem; }
+  .page-index main { max-width: 50rem; }
   .page-index main p { margin-bottom: 2.1rem; }
 }
 
