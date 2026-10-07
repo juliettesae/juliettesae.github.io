@@ -34,8 +34,8 @@ a:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
 .author { position: sticky; top: 5rem; align-self: start; font-size: 0.95rem; }
 .avatar { width: 15rem; height: auto; display: block; margin-bottom: 1.1rem; }
 .avatar-fallback { width: 15rem; height: 18rem; background: var(--soft); display: flex; align-items: center; justify-content: center; font-size: 2.4rem; margin-bottom: 1.1rem; }
-.author-name { font-size: 1.15rem; margin: 0 0 0.25rem; }
-.author-bio { margin: 0 0 1rem; line-height: 1.4; }
+.author-name { font-size: 1.15rem; margin: 0; line-height: 1.3; }
+.author-bio { margin: 0 0 1.8rem; line-height: 1.4; }
 .author-links { list-style: none; padding: 0; margin: 0; }
 .author-links li { display: flex; align-items: center; gap: 0.6rem; padding: 0.15rem 0; }
 .author-links i { width: 1.1rem; text-align: center; }
@@ -78,3 +78,18 @@ footer div { max-width: 72rem; margin: 0 auto; padding: 1.5rem; font-size: 0.85r
 /* Justified body text */
 main p, details p { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
 main .pub-title, main .pub-meta, main .course { text-align: left; hyphens: manual; }
+
+/* Home page: wider sidebar, narrower text, airier paragraphs */
+@media (min-width: 50.01rem) {
+  .page-index .layout { grid-template-columns: 23rem minmax(0, 1fr); gap: 4.5rem; }
+  .page-index .avatar { width: 20rem; }
+  .page-index .avatar-fallback { width: 20rem; height: 24rem; }
+  .page-index main { max-width: 38rem; }
+  .page-index main p { margin-bottom: 2.1rem; }
+}
+
+/* Publications page: wider text column so titles fit on one line */
+@media (min-width: 50.01rem) {
+  .page-publications .layout, .page-publications .masthead-inner, .page-publications footer div { max-width: 80rem; }
+  .page-publications main { max-width: 54rem; }
+}
