@@ -32,13 +32,15 @@ a:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
 
 /* Sidebar */
 .author { position: sticky; top: 5rem; align-self: start; font-size: 0.95rem; }
-.avatar { width: 15rem; height: auto; display: block; margin-bottom: 1.1rem; }
-.avatar-fallback { width: 15rem; height: 18rem; background: var(--soft); display: flex; align-items: center; justify-content: center; font-size: 2.4rem; margin-bottom: 1.1rem; }
+.avatar { width: 17rem; height: auto; display: block; margin-bottom: 1.1rem; }
+.avatar-fallback { width: 17rem; height: 21rem; background: var(--soft); display: flex; align-items: center; justify-content: center; font-size: 2.4rem; margin-bottom: 1.1rem; }
 .author-name { font-size: 1.15rem; margin: 0; line-height: 1.3; }
 .author-bio { margin: 0 0 1.8rem; line-height: 1.4; }
 .author-links { list-style: none; padding: 0; margin: 0; }
 .author-links li { display: flex; align-items: center; gap: 0.6rem; padding: 0.15rem 0; }
 .author-links i { width: 1.1rem; text-align: center; }
+.author-links a { text-decoration: none; }
+.author-links a:hover { text-decoration: underline; }
 .author-links .fa-bluesky { color: #1185fe; }
 .author-links .fa-graduation-cap { color: #4285f4; }
 
@@ -79,18 +81,35 @@ footer div { max-width: 72rem; margin: 0 auto; padding: 1.5rem; font-size: 0.85r
 main p, details p { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
 main .pub-title, main .pub-meta, main .course { text-align: left; hyphens: manual; }
 
-/* Home page: text column wide enough for the first sentence to fit on one line */
+/* Home page: bigger photo, compact text that fits without scrolling */
 @media (min-width: 50.01rem) {
-  .page-index .layout { grid-template-columns: 18rem minmax(0, 1fr); gap: 3.5rem; max-width: 76rem; }
-  .page-index .masthead-inner, .page-index footer div { max-width: 76rem; }
-  .page-index .avatar { width: 17rem; }
-  .page-index .avatar-fallback { width: 17rem; height: 21rem; }
-  .page-index main { max-width: 50rem; }
-  .page-index main p { margin-bottom: 2.1rem; }
+  .page-index .layout { grid-template-columns: 21rem minmax(0, 1fr); gap: 3.5rem; max-width: 78rem; padding-top: 2.5rem; }
+  .page-index .masthead-inner, .page-index footer div { max-width: 78rem; }
+  .page-index .avatar { width: 20rem; }
+  .page-index .avatar-fallback { width: 20rem; height: 25rem; }
+  .page-index main { max-width: 48rem; }
+  .page-index h1 { margin-bottom: 1.1rem; }
+  .page-index main p { font-size: 0.87rem; line-height: 1.45; margin-bottom: 1.05rem; }
 }
 
 /* Publications page: wider text column so titles fit on one line */
 @media (min-width: 50.01rem) {
   .page-publications .layout, .page-publications .masthead-inner, .page-publications footer div { max-width: 80rem; }
   .page-publications main { max-width: 54rem; }
+}
+
+/* Publication thumbnails (shown only if the image file exists) */
+.pub.has-img { display: flex; gap: 1.5rem; align-items: flex-start; }
+.pub-img { flex: 0 0 9rem; width: 9rem; height: auto; display: block; }
+.pub-body { flex: 1; min-width: 0; }
+
+/* Teaching: course name + small resource links */
+.course-name { display: block; }
+.course-links { display: block; font-size: 0.85rem; margin-top: 0.15rem; }
+.course-links a { color: #4a6b8a; text-decoration: none; }
+.course-links a:hover { text-decoration: underline; }
+
+@media (max-width: 50rem) {
+  .pub.has-img { flex-direction: column; gap: 0.6rem; }
+  .pub-img { width: 100%; max-width: 18rem; flex-basis: auto; }
 }
