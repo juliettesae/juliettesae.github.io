@@ -78,7 +78,7 @@ footer div { max-width: 72rem; margin: 0 auto; padding: 1.5rem; font-size: 0.85r
 }
 
 /* Justified body text */
-main p, details p { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+main p, details p { text-align: justify; hyphens: manual; -webkit-hyphens: manual; }
 main .pub-title, main .pub-meta, main .course { text-align: left; hyphens: manual; }
 
 /* Home page: photo + compact text, generous side margins */
@@ -104,7 +104,7 @@ main .pub-title, main .pub-meta, main .course { text-align: left; hyphens: manua
 .page-publications main p { line-height: 1.4; }
 .pub { margin: 0 0 2.6rem; }
 .pub-body { min-width: 0; }
-.abstract { font-size: 0.82rem; line-height: 1.45; margin: 0.6rem 0 0; text-align: justify; hyphens: auto; }
+.abstract { font-size: 0.82rem; line-height: 1.45; margin: 0.6rem 0 0; text-align: justify; hyphens: manual; }
 
 /* Teaching: course name + small resource links */
 .course-name { display: inline; padding: 0.05em 0.3em; margin-left: -0.3em; background: linear-gradient(transparent 12%, #f0ebe0 12%, #f0ebe0 88%, transparent 88%); border-radius: 0.2em 0.5em 0.3em 0.6em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
@@ -169,3 +169,26 @@ h2.wp { margin-top: 4.5rem; }
 @media (min-width: 50.01rem) {
   .page-publications .layout, .page-publications .masthead-inner, .page-publications footer div { max-width: 73rem; }
 }
+
+/* v4 tweaks */
+.pub-cols { align-items: start; }
+.pub-fig { width: 88%; justify-self: end; margin-top: -0.5rem; }
+.pub-cols.fig-left .pub-fig { justify-self: start; margin-top: 0; }
+.pub-fig figcaption { font-size: 0.62rem; margin-top: 0.3rem; }
+.pub-cols.fig-left .pub-title { margin-top: 0; }
+.page-publications h2.pw { margin-top: 0; }
+.pub details summary, .pub details summary:hover { color: #000; }
+/* Home: copyright on the right, level with the last sidebar line */
+@media (min-width: 50.01rem) {
+  .page-index main { display: flex; flex-direction: column; }
+  .page-index .copyright { margin: auto 0 0; text-align: right; font-size: 0.8rem; }
+  .page-index footer { display: none; }
+}
+@media (max-width: 50rem) { .page-index .copyright { display: none; } }
+
+/* Hide the title baked into the top of the Norway map */
+.crop-top { overflow: hidden; }
+.crop-top img { margin-top: -14%; }
+
+/* No word breaking anywhere */
+* { hyphens: manual !important; -webkit-hyphens: manual !important; }
