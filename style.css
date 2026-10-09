@@ -4,7 +4,7 @@
    --font: "Computer Modern Serif", Georgia, serif;                                      */
 :root {
   --font: "IBM Plex Mono", Menlo, Consolas, "Courier New", monospace;
-  --bg: #ffffff;
+  --bg: #fcfaf5;
   --ink: #000000;
   --rule: #e4e4e4;
   --soft: #f3f3f3;
@@ -36,7 +36,7 @@ a:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
 .avatar-fallback { width: 17rem; height: 21rem; background: var(--soft); display: flex; align-items: center; justify-content: center; font-size: 2.4rem; margin-bottom: 1.1rem; }
 .author-name { font-size: 1.15rem; margin: 0; line-height: 1.3; }
 .author-bio { margin: 0 0 1.8rem; line-height: 1.4; }
-.author-links { list-style: none; padding: 0; margin: 0; }
+.author-links { list-style: none; padding: 0; margin: 1.2rem 0 0; font-size: 0.82rem; }
 .author-links li { display: flex; align-items: center; gap: 0.6rem; padding: 0.15rem 0; }
 .author-links i { width: 1.1rem; text-align: center; }
 .author-links a { text-decoration: none; }
@@ -81,35 +81,44 @@ footer div { max-width: 72rem; margin: 0 auto; padding: 1.5rem; font-size: 0.85r
 main p, details p { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
 main .pub-title, main .pub-meta, main .course { text-align: left; hyphens: manual; }
 
-/* Home page: bigger photo, compact text that fits without scrolling */
+/* Home page: photo + compact text, generous side margins */
 @media (min-width: 50.01rem) {
-  .page-index .layout { grid-template-columns: 21rem minmax(0, 1fr); gap: 3.5rem; max-width: 78rem; padding-top: 2.5rem; }
-  .page-index .masthead-inner, .page-index footer div { max-width: 78rem; }
-  .page-index .avatar { width: 20rem; }
-  .page-index .avatar-fallback { width: 20rem; height: 25rem; }
-  .page-index main { max-width: 48rem; }
+  .page-index .layout { grid-template-columns: 18rem minmax(0, 1fr); gap: 3rem; max-width: 72rem; padding: 2.5rem 3rem 1rem; }
+  .page-index .masthead-inner, .page-index footer div { max-width: 72rem; padding-left: 3rem; padding-right: 3rem; }
+  .page-index .avatar { width: 18rem; }
+  .page-index .avatar-fallback { width: 19rem; height: 24rem; }
+  .page-index main { max-width: 45rem; }
   .page-index h1 { margin-bottom: 1.1rem; }
   .page-index main p { font-size: 0.87rem; line-height: 1.45; margin-bottom: 1.05rem; }
 }
 
-/* Publications page: wider text column so titles fit on one line */
-@media (min-width: 50.01rem) {
-  .page-publications .layout, .page-publications .masthead-inner, .page-publications footer div { max-width: 80rem; }
-  .page-publications main { max-width: 54rem; }
-}
+/* Pages without the photo: single centred column */
+.page-cv .layout, .page-publications .layout, .page-teaching .layout { display: block; max-width: 64rem; padding: 2.5rem 4rem 1rem; }
+.page-cv main, .page-publications main, .page-teaching main { max-width: none; }
+.page-cv .masthead-inner, .page-publications .masthead-inner, .page-teaching .masthead-inner,
+.page-cv footer div, .page-publications footer div, .page-teaching footer div { max-width: 64rem; padding-left: 4rem; padding-right: 4rem; }
 
-/* Publication thumbnails (shown only if the image file exists) */
-.pub.has-img { display: flex; gap: 1.5rem; align-items: flex-start; }
-.pub-img { flex: 0 0 9rem; width: 9rem; height: auto; display: block; }
-.pub-body { flex: 1; min-width: 0; }
+/* Publications: old-site layout, text + figure side by side, abstract shown */
+.page-publications main p { line-height: 1.4; }
+.pub { margin: 0 0 2.6rem; }
+.pub.has-img { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr); gap: 3rem; align-items: center; }
+.pub.has-img .pub-img { order: 2; }
+.pub.has-img.img-left { grid-template-columns: minmax(0, 1fr) minmax(0, 1.45fr); }
+.pub.has-img.img-left .pub-img { order: 0; }
+.pub-img { width: 100%; height: auto; display: block; mix-blend-mode: multiply; }
+.pub-body { min-width: 0; }
+.abstract { font-size: 0.82rem; line-height: 1.45; margin: 0.6rem 0 0; text-align: justify; hyphens: auto; }
 
 /* Teaching: course name + small resource links */
-.course-name { display: block; }
+.course-name { display: inline; padding: 0.05em 0.3em; margin-left: -0.3em; background: linear-gradient(transparent 12%, #efdfb8 12%, #efdfb8 88%, transparent 88%); border-radius: 0.2em 0.5em 0.3em 0.6em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.course-name + .course-meta { margin-top: 0.2rem; }
 .course-links { display: block; font-size: 0.85rem; margin-top: 0.15rem; }
 .course-links a { color: #4a6b8a; text-decoration: none; }
 .course-links a:hover { text-decoration: underline; }
 
 @media (max-width: 50rem) {
-  .pub.has-img { flex-direction: column; gap: 0.6rem; }
-  .pub-img { width: 100%; max-width: 18rem; flex-basis: auto; }
+  .pub.has-img, .pub.has-img.img-left { grid-template-columns: 1fr; gap: 1rem; }
+  .pub.has-img .pub-img { order: 2; max-width: 22rem; }
+  .page-cv .layout, .page-publications .layout, .page-teaching .layout { padding: 2rem 1.25rem 1rem; }
+  .page-cv .masthead-inner, .page-publications .masthead-inner, .page-teaching .masthead-inner { padding-left: 1.25rem; padding-right: 1.25rem; }
 }
