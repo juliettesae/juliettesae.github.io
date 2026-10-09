@@ -4,7 +4,7 @@
    --font: "Computer Modern Serif", Georgia, serif;                                      */
 :root {
   --font: "IBM Plex Mono", Menlo, Consolas, "Courier New", monospace;
-  --bg: #fcfaf5;
+  --bg: #fdfcf9;
   --ink: #000000;
   --rule: #e4e4e4;
   --soft: #f3f3f3;
@@ -83,8 +83,8 @@ main .pub-title, main .pub-meta, main .course { text-align: left; hyphens: manua
 
 /* Home page: photo + compact text, generous side margins */
 @media (min-width: 50.01rem) {
-  .page-index .layout { grid-template-columns: 18rem minmax(0, 1fr); gap: 3rem; max-width: 72rem; padding: 2.5rem 3rem 1rem; }
-  .page-index .masthead-inner, .page-index footer div { max-width: 72rem; padding-left: 3rem; padding-right: 3rem; }
+  .page-index .layout { grid-template-columns: 18rem minmax(0, 1fr); gap: 5rem; max-width: 77rem; padding: 2.5rem 3rem 1rem; }
+  .page-index .masthead-inner, .page-index footer div { max-width: 77rem; padding-left: 3rem; padding-right: 3rem; }
   .page-index .avatar { width: 18rem; }
   .page-index .avatar-fallback { width: 19rem; height: 24rem; }
   .page-index main { max-width: 45rem; }
@@ -101,16 +101,16 @@ main .pub-title, main .pub-meta, main .course { text-align: left; hyphens: manua
 /* Publications: old-site layout, text + figure side by side, abstract shown */
 .page-publications main p { line-height: 1.4; }
 .pub { margin: 0 0 2.6rem; }
-.pub.has-img { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr); gap: 3rem; align-items: center; }
-.pub.has-img .pub-img { order: 2; }
+.pub.has-img { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 3.5rem; align-items: center; }
+.pub.has-img .pub-img { order: 2; justify-self: end; margin-right: -4rem; width: calc(100% + 4rem); }
 .pub.has-img.img-left { grid-template-columns: minmax(0, 1fr) minmax(0, 1.45fr); }
-.pub.has-img.img-left .pub-img { order: 0; }
+.pub.has-img.img-left .pub-img { order: 0; justify-self: start; margin-right: 0; width: 100%; }
 .pub-img { width: 100%; height: auto; display: block; mix-blend-mode: multiply; }
 .pub-body { min-width: 0; }
 .abstract { font-size: 0.82rem; line-height: 1.45; margin: 0.6rem 0 0; text-align: justify; hyphens: auto; }
 
 /* Teaching: course name + small resource links */
-.course-name { display: inline; padding: 0.05em 0.3em; margin-left: -0.3em; background: linear-gradient(transparent 12%, #efdfb8 12%, #efdfb8 88%, transparent 88%); border-radius: 0.2em 0.5em 0.3em 0.6em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.course-name { display: inline; padding: 0.05em 0.3em; margin-left: -0.3em; background: linear-gradient(transparent 12%, #ebe3d5 12%, #ebe3d5 88%, transparent 88%); border-radius: 0.2em 0.5em 0.3em 0.6em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
 .course-name + .course-meta { margin-top: 0.2rem; }
 .course-links { display: block; font-size: 0.85rem; margin-top: 0.15rem; }
 .course-links a { color: #4a6b8a; text-decoration: none; }
@@ -122,3 +122,20 @@ main .pub-title, main .pub-meta, main .course { text-align: left; hyphens: manua
   .page-cv .layout, .page-publications .layout, .page-teaching .layout { padding: 2rem 1.25rem 1rem; }
   .page-cv .masthead-inner, .page-publications .masthead-inner, .page-teaching .masthead-inner { padding-left: 1.25rem; padding-right: 1.25rem; }
 }
+
+/* Marker highlight for headings */
+.marker { padding: 0.05em 0.3em; margin-left: -0.3em; background: linear-gradient(transparent 12%, #ebe3d5 12%, #ebe3d5 88%, transparent 88%); border-radius: 0.2em 0.5em 0.3em 0.6em; }
+.pub-coauthor { font-style: italic; font-size: 0.82rem; margin: 0 0 0.35rem; }
+.pub details summary { margin-top: 0.4rem; }
+.pub details .abstract { background: none; padding: 0; }
+
+/* Small icon row at the bottom of pages without the sidebar */
+.footer-icons { display: flex; justify-content: center; gap: 1.4rem; font-size: 1.15rem; }
+.footer-icons a { text-decoration: none; }
+.footer-icons .fa-bluesky { color: #000; }
+.footer-icons .fa-envelope { color: #666; }
+.footer-icons .fa-graduation-cap { color: #4285f4; }
+.footer-icons a:hover { opacity: 0.7; }
+
+/* Soft inline highlight for key phrases */
+.hl { background: linear-gradient(transparent 15%, #efe9dd 15%, #efe9dd 85%, transparent 85%); padding: 0 0.15em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
