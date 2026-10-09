@@ -83,12 +83,14 @@ main .pub-title, main .pub-meta, main .course { text-align: left; hyphens: manua
 
 /* Home page: photo + compact text, generous side margins */
 @media (min-width: 50.01rem) {
-  .page-index .layout { grid-template-columns: 18rem minmax(0, 1fr); gap: 5rem; max-width: 77rem; padding: 2.5rem 3rem 1rem; }
-  .page-index .masthead-inner, .page-index footer div { max-width: 77rem; padding-left: 3rem; padding-right: 3rem; }
+  .page-index .layout { grid-template-columns: 18rem minmax(0, 1fr); gap: 5rem; max-width: 80rem; padding: 2.5rem 5rem 0; }
+  .page-index .masthead-inner, .page-index footer div { max-width: 80rem; padding-left: 5rem; padding-right: 5rem; }
+  .page-index footer { margin-top: 1rem; }
+  .page-index footer div { padding-top: 0.5rem; padding-bottom: 1rem; }
   .page-index .avatar { width: 18rem; }
   .page-index .avatar-fallback { width: 19rem; height: 24rem; }
   .page-index main { max-width: 45rem; }
-  .page-index h1 { margin-bottom: 1.1rem; }
+  .page-index h1 { margin-bottom: 1.9rem; }
   .page-index main p { font-size: 0.87rem; line-height: 1.45; margin-bottom: 1.05rem; }
 }
 
@@ -101,16 +103,11 @@ main .pub-title, main .pub-meta, main .course { text-align: left; hyphens: manua
 /* Publications: old-site layout, text + figure side by side, abstract shown */
 .page-publications main p { line-height: 1.4; }
 .pub { margin: 0 0 2.6rem; }
-.pub.has-img { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 3.5rem; align-items: center; }
-.pub.has-img .pub-img { order: 2; justify-self: end; margin-right: -4rem; width: calc(100% + 4rem); }
-.pub.has-img.img-left { grid-template-columns: minmax(0, 1fr) minmax(0, 1.45fr); }
-.pub.has-img.img-left .pub-img { order: 0; justify-self: start; margin-right: 0; width: 100%; }
-.pub-img { width: 100%; height: auto; display: block; mix-blend-mode: multiply; }
 .pub-body { min-width: 0; }
 .abstract { font-size: 0.82rem; line-height: 1.45; margin: 0.6rem 0 0; text-align: justify; hyphens: auto; }
 
 /* Teaching: course name + small resource links */
-.course-name { display: inline; padding: 0.05em 0.3em; margin-left: -0.3em; background: linear-gradient(transparent 12%, #ebe3d5 12%, #ebe3d5 88%, transparent 88%); border-radius: 0.2em 0.5em 0.3em 0.6em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.course-name { display: inline; padding: 0.05em 0.3em; margin-left: -0.3em; background: linear-gradient(transparent 12%, #f0ebe0 12%, #f0ebe0 88%, transparent 88%); border-radius: 0.2em 0.5em 0.3em 0.6em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
 .course-name + .course-meta { margin-top: 0.2rem; }
 .course-links { display: block; font-size: 0.85rem; margin-top: 0.15rem; }
 .course-links a { color: #4a6b8a; text-decoration: none; }
@@ -124,7 +121,7 @@ main .pub-title, main .pub-meta, main .course { text-align: left; hyphens: manua
 }
 
 /* Marker highlight for headings */
-.marker { padding: 0.05em 0.3em; margin-left: -0.3em; background: linear-gradient(transparent 12%, #ebe3d5 12%, #ebe3d5 88%, transparent 88%); border-radius: 0.2em 0.5em 0.3em 0.6em; }
+.marker { padding: 0.05em 0.3em; margin-left: -0.3em; background: linear-gradient(transparent 12%, #f0ebe0 12%, #f0ebe0 88%, transparent 88%); border-radius: 0.2em 0.5em 0.3em 0.6em; }
 .pub-coauthor { font-style: italic; font-size: 0.82rem; margin: 0 0 0.35rem; }
 .pub details summary { margin-top: 0.4rem; }
 .pub details .abstract { background: none; padding: 0; }
@@ -138,4 +135,37 @@ main .pub-title, main .pub-meta, main .course { text-align: left; hyphens: manua
 .footer-icons a:hover { opacity: 0.7; }
 
 /* Soft inline highlight for key phrases */
-.hl { background: linear-gradient(transparent 15%, #efe9dd 15%, #efe9dd 85%, transparent 85%); padding: 0 0.15em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.hl { background: linear-gradient(transparent 15%, #f3efe6 15%, #f3efe6 85%, transparent 85%); padding: 0 0.15em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+
+/* Publications v3 */
+.page-publications .layout { padding-top: 3rem; }
+.pub-title { margin-bottom: 0.2rem; }
+.page-publications .pub-title, .page-publications .pub-title a { text-decoration: underline; text-decoration-color: #000; text-underline-offset: 0.18em; }
+.pub-cols { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 3rem; align-items: center; margin-top: 0.4rem; }
+.pub-cols.fig-left { grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr); }
+.pub-cols.no-fig { display: block; }
+.pub-fig { margin: 0; }
+.pub-fig img { width: 100%; height: auto; display: block; mix-blend-mode: multiply; }
+.pub-fig figcaption { font-size: 0.75rem; margin-top: 0.5rem; text-align: center; }
+.pub-cols .abstract { margin: 0; }
+h2.wp { margin-top: 4.5rem; }
+.pub details summary { text-decoration: none; color: #4a6b8a; font-size: 0.85rem; }
+.pub details summary:hover { color: #2c4a66; }
+.pub details[open] summary { margin-bottom: 0.3rem; }
+@media (max-width: 50rem) {
+  .pub-cols, .pub-cols.fig-left { grid-template-columns: 1fr; gap: 1rem; }
+  .pub-cols.fig-left .pub-fig { order: 2; }
+}
+
+/* Footer icons all black on inner pages */
+.footer-icons .fa-bluesky, .footer-icons .fa-envelope, .footer-icons .fa-graduation-cap { color: #000; }
+
+/* Teaching spacing */
+.page-teaching .course { margin: 0 0 2rem; line-height: 1.35; }
+.page-teaching .course-name + .course-meta { margin-top: 0.15rem; }
+.page-teaching .course-links { margin-top: 0.1rem; }
+
+/* Publications: wide enough for long titles on one line */
+@media (min-width: 50.01rem) {
+  .page-publications .layout, .page-publications .masthead-inner, .page-publications footer div { max-width: 73rem; }
+}
