@@ -78,7 +78,7 @@ footer div { max-width: 72rem; margin: 0 auto; padding: 1.5rem; font-size: 0.85r
 }
 
 /* Justified body text */
-main p, details p { text-align: justify; hyphens: manual; -webkit-hyphens: manual; }
+main p, details p { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
 main .pub-title, main .pub-meta, main .course { text-align: left; hyphens: manual; }
 
 /* Home page: photo + compact text, generous side margins */
@@ -104,7 +104,7 @@ main .pub-title, main .pub-meta, main .course { text-align: left; hyphens: manua
 .page-publications main p { line-height: 1.4; }
 .pub { margin: 0 0 2.6rem; }
 .pub-body { min-width: 0; }
-.abstract { font-size: 0.82rem; line-height: 1.45; margin: 0.6rem 0 0; text-align: justify; hyphens: manual; }
+.abstract { font-size: 0.82rem; line-height: 1.45; margin: 0.6rem 0 0; text-align: justify; hyphens: auto; }
 
 /* Teaching: course name + small resource links */
 .course-name { display: inline; padding: 0.05em 0.3em; margin-left: -0.3em; background: linear-gradient(transparent 12%, #f0ebe0 12%, #f0ebe0 88%, transparent 88%); border-radius: 0.2em 0.5em 0.3em 0.6em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
@@ -189,6 +189,3 @@ h2.wp { margin-top: 4.5rem; }
 /* Hide the title baked into the top of the Norway map */
 .crop-top { overflow: hidden; }
 .crop-top img { margin-top: -14%; }
-
-/* No word breaking anywhere */
-* { hyphens: manual !important; -webkit-hyphens: manual !important; }
