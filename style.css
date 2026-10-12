@@ -201,3 +201,25 @@ h2.wp { margin-top: 4.5rem; }
 .pub.wp-start { margin-top: 5.5rem; }
 .pub.wp-start h2.wp { margin: 0 0 1rem; }
 @media (min-width: 50.01rem) { .page-index .copyright { position: relative; top: 0.9rem; } }
+
+/* ===== Phone layout (laptop unchanged) ===== */
+@media (max-width: 50rem) {
+  .page-index .layout { padding: 1.5rem 1.5rem 0; gap: 1.5rem; }
+  .author { display: block; padding-bottom: 0.5rem; }
+  .avatar, .page-index .avatar { width: 100%; max-width: none; grid-row: auto; margin: 0 0 1rem; }
+  .author-name { margin: 0 0 0.6rem; }
+  .author-links { display: block; margin-top: 0; }
+  .author-links li { padding: 0.3rem 0; }
+  /* justified text leaves big gaps on a narrow screen: align left instead */
+  main p, details p, .abstract, .page-index main p { text-align: left; }
+  .masthead-inner, .page-index .masthead-inner { padding-left: 1.5rem; padding-right: 1.5rem; }
+  .nav { gap: 1.4rem; }
+  /* no underline on CREST / IAST links */
+  a.plain { text-decoration: none; }
+  /* abstracts collapsed behind an arrow */
+  .abs-label { display: none; }
+}
+/* Laptop: abstracts always shown, no arrow */
+@media (min-width: 50.01rem) {
+  details.abs-toggle > summary { display: none; }
+}
